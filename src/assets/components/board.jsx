@@ -4,12 +4,17 @@ import { useState } from "react";
 
 export default function Board() {
   const [squares, setSquares] = useState(Array(9).fill(null));
+  const [player, setPlayer] = useState(true)
 
   function handleClick(i) {
+    if (squares[i]) {
+      return; // Nothing To Do Because It already has a value 
+    }
     const nextSquares = squares.slice(); // Creating a Copy of the original array
-    nextSquares[i] = "X";
+    nextSquares[i] = (player) ? 'X' : 'O'; // Setting Mark
+    setPlayer(!player); // Changing Player
     setSquares(nextSquares); // Function of useState Hook
-  }
+  }   
   return (
     <div className="grid grid-rows-3 justify-stretch align-center h-1/2 w-full p-4 md:w-3/5 gap-2 rounded-lg ">
       <div className="columns-3 gap-2 w-full">
