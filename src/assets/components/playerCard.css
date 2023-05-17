@@ -1,0 +1,28 @@
+.playercard{
+    min-width: 250px;
+    max-width: 350px;
+    transition: .4s all ease-in-out;
+    border-style: double;
+    border-width: .5em;
+    
+}
+.turnOn{
+    
+    
+    scale: 1.2;
+}
+.turnOn.playerOne{
+    *transform: translate(20px);
+}
+.turnOn.playerTwo{
+    *transform: translate(-20px);
+}
+
+.playerOne{
+    background-color: rgb(167, 191, 236);
+    border-color: rgb(13, 63, 202);
+}
+.playerTwo{
+    background-color: rgb(255, 176, 176);
+    border-color: rgb(202, 13, 13);
+}

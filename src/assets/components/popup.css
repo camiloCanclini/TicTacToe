@@ -42,6 +42,7 @@ input{
     font-family: 'Asap', sans-serif;
 }
 input:focus{
+    background-color: initial !important;
     outline: none;
     scale: 1.02;
 }

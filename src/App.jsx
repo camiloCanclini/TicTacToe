@@ -11,10 +11,12 @@ function App() {
   const [players, setPlayers] = useState(
     {
       playerOne:{
-        name: null
+        name: null,
+        icon:'X'
       },
       playerTwo:{
-        name: null
+        name: null,
+        icon: 'O'
       }
     }
   )
