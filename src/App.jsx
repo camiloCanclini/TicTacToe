@@ -1,15 +1,15 @@
 import { useState } from 'react'
 
-import Board from './assets/components/board.jsx'
 import './App.css'
+import Board from './assets/components/board.jsx'
+import PopUp from './assets/components/popup.jsx'
 
 function App() {
   
-  //const [squares, setSquares] = useState(Array(9).fill(null));
-
+  const [popUpState, setPopUpState] = useState(true)
   return (
     <>
-      <Board></Board>  
+      {popUpState ? <PopUp setPopUpState={setPopUpState}></PopUp>  : <Board></Board>}
     </>
   )
 }

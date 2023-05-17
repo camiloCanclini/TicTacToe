@@ -1,7 +1,6 @@
 import "./square.css";
 
 
-
 export default function Square({ state, onClickFunction }) {
     return (
       <div className="square w-full h-full bg-slate-100 rounded-lg hover:scale-105" onClick={onClickFunction}>

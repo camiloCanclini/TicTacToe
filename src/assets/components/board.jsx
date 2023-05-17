@@ -3,16 +3,26 @@ import "./board.css";
 import { useState } from "react";
 
 export default function Board() {
+
   const [squares, setSquares] = useState(Array(9).fill(null));
-  const [player, setPlayer] = useState(true)
+  
+  const [turn, setTurn] = useState(true)
+
+  const [player, setPlayer] = useState(
+    {
+      turnOne: {},
+      turnTwo: {}
+    }
+  )
+  
 
   function handleClick(i) {
     if (squares[i]) {
       return; // Nothing To Do Because It already has a value 
     }
     const nextSquares = squares.slice(); // Creating a Copy of the original array
-    nextSquares[i] = (player) ? 'X' : 'O'; // Setting Mark
-    setPlayer(!player); // Changing Player
+    nextSquares[i] = (turn) ? 'X' : 'O'; // Setting Mark
+    setTurn(!turn); // Changing turn
     setSquares(nextSquares); // Function of useState Hook
   }   
   return (
