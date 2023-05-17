@@ -1,11 +1,27 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import './popup.css'
 
-export default function PopUp({setPopUpState}) {
+export default function PopUp({setPopUpState, setPlayers, players}) {
+  
+  const playerOneName = useRef(null);
+  const playerTwoName = useRef(null);
 
+  
+  
   const handleSubmit = (e) => {
     e.preventDefault();
     setPopUpState(false);
+    setPlayers({
+      ...players,
+      ["playerOne"]: {
+        ...players["playersOne"],
+        name: playerOneName.current.value
+      },
+      ["playerTwo"]: {
+        ...players["playerTwo"],
+        name: playerTwoName.current.value
+      }
+    })
   };
 
   return (
@@ -15,14 +31,14 @@ export default function PopUp({setPopUpState}) {
           <img src="src/assets/forms/cross.svg" alt="" width={40} height={40} className="m-2"/>
           <div className="flex-grow">
             <label htmlFor="playerOne">Player Name</label>
-            <input type="text" id="playerOne" className="bg-blue-400 p-1 px-4 w-full rounded-xl"/>
+            <input ref={playerOneName} type="text" id="playerOne" className="bg-blue-400 p-1 px-4 w-full rounded-xl"/>
           </div>
         </div>
         <div className="flex p-4">
           <img src="src/assets/forms/circle.svg" alt="" width={40} height={40} className="m-2"/>
           <div className="flex-grow">
             <label htmlFor="playerTwo">Player Name</label>
-            <input type="text" id="playerTwo" className="bg-red-400 p-1 px-4 w-full rounded-xl"/>
+            <input ref={playerTwoName} type="text" id="playerTwo" className="bg-red-400 p-1 px-4 w-full rounded-xl"/>
           </div>
         </div>
         <input type="submit" value="Start" className="cursor-pointer p-2 bg-yellow-500 rounded-full w-28 shadow-inner shadow-amber-300 mx-auto"/>
