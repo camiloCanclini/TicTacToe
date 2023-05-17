@@ -26,8 +26,8 @@ export default function Board() {
     setSquares(nextSquares); // Function of useState Hook
   }   
   return (
-    <div className="grid grid-rows-3 justify-stretch align-center h-1/2 w-full p-4 md:w-3/5 gap-2 rounded-lg ">
-      <div className="columns-3 gap-2 w-full">
+    <div className="board grid grid-rows-3 justify-stretch align-center h-1/2 max-w-sm w-full p-4 sm:w-3/5 gap-2 rounded-lg ">
+      <div className="columns-3 gap-2">
         <Square state={squares[0]} onClickFunction={() => handleClick(0)} />
         <Square state={squares[1]} onClickFunction={() => handleClick(1)} />
         <Square state={squares[2]} onClickFunction={() => handleClick(2)} />

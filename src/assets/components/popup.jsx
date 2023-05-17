@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import './popup.css'
 
 export default function PopUp({setPopUpState}) {
 
@@ -8,18 +9,23 @@ export default function PopUp({setPopUpState}) {
   };
 
   return (
-    <div className="absolute w-2/3 h-2/3">
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="">Player One</label>
-          <img src="src/assets/forms/cross.svg" alt="" width={30} height={30} />
-          <input type="text" />
+    <div className="popup absolute w-2/5 h-2/5 rounded-lg shadow-lg">
+      <form onSubmit={handleSubmit} className="flex flex-col justify-center w-full h-full">
+        <div className="flex p-4">
+          <img src="src/assets/forms/cross.svg" alt="" width={40} height={40} className="m-2"/>
+          <div className="flex-grow">
+            <label htmlFor="playerOne">Player Name</label>
+            <input type="text" id="playerOne" className="bg-blue-400 p-1 px-4 w-full rounded-xl"/>
+          </div>
         </div>
-        <div>
-          <label htmlFor="">Player Two</label>
-          <input type="text" />
+        <div className="flex p-4">
+          <img src="src/assets/forms/circle.svg" alt="" width={40} height={40} className="m-2"/>
+          <div className="flex-grow">
+            <label htmlFor="playerTwo">Player Name</label>
+            <input type="text" id="playerTwo" className="bg-red-400 p-1 px-4 w-full rounded-xl"/>
+          </div>
         </div>
-        <input type="submit" value="Start" />
+        <input type="submit" value="Start" className="cursor-pointer p-2 bg-yellow-500 rounded-full w-28 shadow-inner shadow-amber-300 mx-auto"/>
       </form>
     </div>
   );
