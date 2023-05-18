@@ -83,8 +83,8 @@ export default function Board({ players, setPlayers }) {
           playAgain={playAgain}
         />
       ) : null}
-      {(winner != null && showWinnner == false) || !squares.includes(null) ? <button onClick={playAgain} className="playagain-btn absolute bottom-24 cursor-pointer p-4 w-20 h-20 bg-yellow-500 rounded-full shadow-inner shadow-amber-300 mx-2 hover:scale-105 transition-all"><i class="fa-solid fa-rotate-right text-3xl"></i></button> : null}
-      <div className="flex flex-col justify-center items-center md:flex-row w-full">
+      
+      <div className="flex flex-col justify-center items-center lg:flex-row w-full">
         <PlayerCard player={players.playerOne} turn={turn}></PlayerCard>
         <PlayerCard player={players.playerTwo} turn={!turn}></PlayerCard>
       </div>
@@ -105,6 +105,7 @@ export default function Board({ players, setPlayers }) {
           <Square state={squares[8]} onClickFunction={() => handleClick(8)} />
         </div>
       </div>
+      {(winner != null && showWinnner == false) || !squares.includes(null) ? <button onClick={playAgain} className="playagain-btn cursor-pointer p-4 w-20 h-20 bg-yellow-500 rounded-full shadow-inner shadow-amber-300 mx-2 hover:scale-105 transition-all"><i class="fa-solid fa-rotate-right text-3xl"></i></button> : null}
     </>
   );
 }

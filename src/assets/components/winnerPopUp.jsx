@@ -4,9 +4,9 @@ import trophyIcon from '../forms/trophy.svg'
 
 export default function WinnerPopUp({winner, closePopUp, playAgain}){
     return (
-        <div className="winnerPopUp z-10 flex flex-col items-center justify-center w-4/5 md:w-1/4 h-1/2 absolute rounded-xl">
+        <div className="winnerPopUp z-10 flex flex-col items-center justify-center w-4/5 xl:w-1/4 h-1/2 absolute rounded-xl">
             <div className='h-full flex flex-col items-center justify-evenly'>
-                <img src={trophyIcon} width="300"  alt="" />
+                <img src={trophyIcon} className='w-48'/>
                 <p className='text-2xl'>The Winner Is: {winner.name}</p>
             </div>
             <div className='flex p-2 my-6'>
