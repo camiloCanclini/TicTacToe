@@ -1,4 +1,6 @@
 import "./playerCard.css";
+import crossIcon from '../forms/cross.svg'
+import circleIcon from '../forms/circle.svg'
 
 export default function PlayerCard({ player, turn }) {
   //console.log(player);
@@ -8,7 +10,7 @@ export default function PlayerCard({ player, turn }) {
     <div className={playerNumber +" "+ turnOn +" playercard flex items-center flex-grow mx-4 my-3 rounded-xl"}>
       <img
         src={
-          player.icon=='X' ? "src/assets/forms/cross.svg" : "src/assets/forms/circle.svg"
+          player.icon=='X' ? crossIcon : circleIcon
         }
         alt=""
         width={50}

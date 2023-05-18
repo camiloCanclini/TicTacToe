@@ -1,5 +1,7 @@
 import React, { useState, useRef } from "react";
 import './popup.css'
+import crossIcon from '../forms/cross.svg'
+import circleIcon from '../forms/circle.svg'
 
 export default function PopUp({setPopUpState, setPlayers, players}) {
   
@@ -28,14 +30,14 @@ export default function PopUp({setPopUpState, setPlayers, players}) {
     <div className="popup p-5 absolute w-4/5 sm:w-96 h-2/5 rounded-lg shadow-lg">
       <form onSubmit={handleSubmit} className="flex flex-col justify-evenly w-full h-full">
         <div className="flex p-4">
-          <img src="src/assets/forms/cross.svg" alt="" width={40} height={40} className="m-2"/>
+          <img src={crossIcon} alt="" width={40} height={40} className="m-2"/>
           <div className="flex-grow">
             <label htmlFor="playerOne">Player Name</label>
             <input ref={playerOneName} required type="text" id="playerOne" className="bg-blue-400 p-1 px-4 w-full rounded-xl"/>
           </div>
         </div>
         <div className="flex p-4">
-          <img src="src/assets/forms/circle.svg" alt="" width={40} height={40} className="m-2"/>
+          <img src={circleIcon} alt="" width={40} height={40} className="m-2"/>
           <div className="flex-grow">
             <label htmlFor="playerTwo">Player Name</label>
             <input ref={playerTwoName} required type="text" id="playerTwo" className="bg-red-400 p-1 px-4 w-full rounded-xl"/>
