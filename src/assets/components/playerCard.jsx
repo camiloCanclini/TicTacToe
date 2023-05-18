@@ -1,7 +1,7 @@
 import "./playerCard.css";
 
 export default function PlayerCard({ player, turn }) {
-  console.log(player);
+  //console.log(player);
   let turnOn = turn ? "turnOn" : "turnOff";
   let playerNumber = player.icon=='X' ? "playerOne" : "playerTwo"
   return (

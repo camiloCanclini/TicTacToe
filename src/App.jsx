@@ -12,11 +12,13 @@ function App() {
     {
       playerOne:{
         name: null,
-        icon:'X'
+        icon:'X',
+        wins: 0,
       },
       playerTwo:{
         name: null,
-        icon: 'O'
+        icon: 'O',
+        wins: 0,
       }
     }
   )
@@ -27,7 +29,7 @@ function App() {
         <PopUp setPopUpState={setPopUpState} setPlayers={setPlayers} players={players}></PopUp>
       ) : (
         <>
-          <Board players={players}></Board>
+          <Board players={players} setPlayers={setPlayers}></Board>
           <div></div>
         </>
       )}
