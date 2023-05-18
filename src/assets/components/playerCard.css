@@ -6,16 +6,8 @@
     border-width: .5em;
     
 }
-.turnOn{
-    
-    
+.turnOn{   
     scale: 1.2;
-}
-.turnOn.playerOne{
-    *transform: translate(20px);
-}
-.turnOn.playerTwo{
-    *transform: translate(-20px);
 }
 
 .playerOne{
