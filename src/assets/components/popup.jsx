@@ -27,7 +27,7 @@ export default function PopUp({setPopUpState, setPlayers, players}) {
   };
 
   return (
-    <div className="popup p-5 absolute w-4/5 sm:w-96 h-2/5 rounded-lg shadow-lg">
+    <div className="popup z-50 p-5 absolute w-4/5 sm:w-96 h-2/5 rounded-lg shadow-lg">
       <form onSubmit={handleSubmit} className="flex flex-col justify-evenly w-full h-full">
         <div className="flex p-4">
           <img src={crossIcon} alt="" width={40} height={40} className="m-2"/>

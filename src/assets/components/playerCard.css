@@ -18,3 +18,15 @@
     background-color: rgb(255, 176, 176);
     border-color: rgb(202, 13, 13);
 }
+
+.trophies{
+    display: flex;
+    align-items: center;
+    height: 2.2rem;
+}
+.trophies > *{
+    max-height: 100%;
+    rotate: -15deg;
+    flex-basis: 6px;
+    flex-grow: 1;
+}

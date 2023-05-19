@@ -50,11 +50,11 @@ export default function Board({ players, setPlayers }) {
           ...players,
           ["playerOne"]: {
             ...players["playerOne"],
-            wins: players.playerOne.wins + 1,
+            wins: squares[a] == 'X' ? players.playerOne.wins + 1 : players.playerOne.wins,
           },
           ["playerTwo"]: {
             ...players["playerTwo"],
-            wins: players.playerTwo.wins + 1,
+            wins: squares[a] == 'O' ? players.playerTwo.wins + 1 : players.playerTwo.wins,
           },
         });
         //console.log("hay un ganador");
