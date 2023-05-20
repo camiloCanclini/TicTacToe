@@ -1,8 +1,8 @@
 import { useState } from "react";
 
 import "./App.css";
-import Board from "./assets/components/board.jsx";
-import PopUp from "./assets/components/popup.jsx";
+import Board from "./assets/components/board/board.jsx";
+import PopUp from "./assets/components/popup/popup.jsx";
 
 function App() {
   
